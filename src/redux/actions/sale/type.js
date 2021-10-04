@@ -1,0 +1,1 @@
+export const GET_ALL_SALES = "GET_ALL_SALES";

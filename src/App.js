@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import Dashboard from './pages/dashboard';
+import { getUsers } from './redux/actions/user';
+import { getSales } from './redux/actions/sale';
+import { connect } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = ({ getUsers, getSales }) => {
+
+    useEffect(() => {
+        Promise.all([
+            fetch("https://6155a05293e3550017b08b11.mockapi.io/users").then( res => res.json()),
+            fetch("https://6155a05293e3550017b08b11.mockapi.io/sales ").then( res => res.json())
+        ])
+        .then( arr => {
+            getUsers(arr[0]);
+            getSales(arr[1]);
+        })
+    }, []);
+
+    return (
+        <div>
+            <Dashboard />
+        </div>
+    )
 }
 
-export default App;
+const mapDispatchToProps = {
+    getUsers, getSales
+}
+
+export default connect(null, mapDispatchToProps)(App);

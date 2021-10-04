@@ -1,0 +1,71 @@
+.sidebar-container {
+    width: 252px;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 2px 0px 4px rgba(185, 185, 185, 0.25);
+    border-radius: 0px 20px 20px 0px;
+}
+
+/* User component */
+.account-container {
+    height: 45px;
+    display: flex;
+    padding: 20px 40px;
+    border-bottom: 1px solid #F3F3F3;
+}
+.account-avatar {
+    width: 48.42px;
+    height: 45px;
+}
+.account-info {
+}
+.account-name {
+    color: #000000;
+    padding: 2px 0;
+}
+.account-role {
+    font-size: 14px;
+    color: #979797;
+}
+
+/* Menu component */
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 100px);
+    justify-content: space-between;
+}
+.menu-container {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px 0;
+    /* justify-content: space-between; */
+}
+.menu-item:hover {
+    background: #EFEFEF;
+    border-radius: 9px;
+} 
+.menu-item-end {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 10px 40px;
+    /* align-self: flex-end; */
+}
+.menu-item-name {
+    padding: 5px 10px;
+}
+.menu-item-end > div {
+    padding: 5px 10px;
+    color: #979797;
+}
+.menu-item-end:hover {
+    background: #EFEFEF;
+    border-radius: 9px;
+} 

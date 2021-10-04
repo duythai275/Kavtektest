@@ -1,0 +1,26 @@
+.card1-wrapper {
+    padding: 10px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card1-container {
+    width: 100%;
+    padding: 40px;
+}
+
+.card1-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card1-subtitle {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.card1-content {
+    padding: 15px 0 0 0;
+    height: 100%;
+    overflow: auto;
+}
